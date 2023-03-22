@@ -1,22 +1,24 @@
-﻿namespace Shared.Lib
+﻿using System.Threading.Tasks;
+
+namespace Shared.Lib
 {
-  public class Service1 : IService1
-  {
-    private readonly SharedConfig _config;
-
-    public Service1(SharedConfig config)
+    public class Service1 : IService1
     {
-      _config = config;
-    }
+        private readonly SharedConfig _config;
 
-    public string Service1Method()
-    {
-      return "This is service1";
-    }
+        public Service1(SharedConfig config)
+        {
+            _config = config;
+        }
 
-    public SharedConfig Service1Config()
-    {
-      return _config;
+        public async Task<string> Service1MethodAsync()
+        {
+            return await Task.FromResult("This is service1");
+        }
+
+        public async Task<SharedConfig> Service1ConfigAsync()
+        {
+            return await Task.FromResult(_config);
+        }
     }
-  }
 }

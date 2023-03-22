@@ -2,8 +2,8 @@
 
 namespace Shared.Lib
 {
-  public interface IServiceInjector
-  {
-    void InjectServices(IUnityContainer container);
-  }
+    public interface IServiceInjector<in T>
+    {
+        void InjectServices(T container);
+    }
 }

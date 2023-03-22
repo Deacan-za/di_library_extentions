@@ -1,29 +1,28 @@
 
+using Shared.Unity.Abstractions;
 using System.Web.Http;
-using Shared.Lib;
 using Unity;
 using Unity.WebApi;
 
 namespace Test.API
 {
-  public static class UnityConfig
-  {
-    public static void RegisterComponents()
+    public static class UnityConfig
     {
-      var container = new UnityContainer();
-      container.AddSharedServices(config =>
-      {
-        config.InputValue = "This is a configuration string";
-        config.ProductId = 5002;
-      });
+        public static void RegisterComponents()
+        {
+            var container = new UnityContainer();
+            container.AddSharedServices(config =>
+            {
+                config.InputValue = "This is a configuration string";
+                config.ProductId = 1234;
+            });
 
+            // register all your components with the container here
+            // it is NOT necessary to register your controllers
 
-      // register all your components with the container here
-      // it is NOT necessary to register your controllers
+            // e.g. container.RegisterType<ITestService, TestService>();
 
-      // e.g. container.RegisterType<ITestService, TestService>();
-
-      GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
+            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
+        }
     }
-  }
 }

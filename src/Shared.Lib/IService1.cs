@@ -1,9 +1,11 @@
-﻿namespace Shared.Lib
-{
-  public interface IService1
-  {
-    string Service1Method();
+﻿using System.Threading.Tasks;
 
-    SharedConfig Service1Config();
-  }
+namespace Shared.Lib
+{
+    public interface IService1
+    {
+        Task<string> Service1MethodAsync();
+
+        Task<SharedConfig> Service1ConfigAsync();
+    }
 }
