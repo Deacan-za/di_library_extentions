@@ -1,29 +1,17 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+When writting libraries that are going to be consumed by other api's. How do we go about providing a
+simple way of registering the required dependencies for the user in their APIs? How do we provided the 
+ability for the user to provided the required configuration into the library?
 
-### How do I get set up? ###
+This repo will provide examples for
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+- Unity
+- Microsoft's built in IServiceCollection
+- Alternative for when you have written a library
+  that will only be consumed by your own API and you don't
+  want to expose the DI container into your library. 
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+This repo will serve as example code for an upcoming article.
