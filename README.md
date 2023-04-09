@@ -10,8 +10,5 @@ This repo will provide examples for
 
 - Unity
 - Microsoft's built in IServiceCollection
-- Alternative for when you have written a library
-  that will only be consumed by your own API and you don't
-  want to expose the DI container into your library. 
 
 This repo will serve as example code for an upcoming article.
